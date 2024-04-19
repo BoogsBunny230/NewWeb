@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIAUMex</title>
+
+    <link rel="stylesheet" href="Layout.css">
+    <link rel="stylesheet" href="materialize.min.css">
+    <link rel="stylesheet" href="estilos.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+        body {
+            visibility: hidden; /* Oculta todo el contenido */
+        }
+        img {
+            visibility: hidden;
+        }
+    </style>
+
+</head>
+<body>
+
+    
+    <div id="navbar"></div>
+    <div class="main-content">
+        
+        <div class="header-content containerimg">
+            <div class="image-box">
+                <img src="Images/Servicos1.webp" alt="Imagen 1">
+                <h2>Mantenimiento</h2>
+                <p>Mantén tus equipos de pesaje en óptimas condiciones con mantenimientos preventivos y corrige problemas con mantenimientos correctivos.</p>
+            </div>
+            
+            <div class="image-box">
+                <img src="Images/Servicios2.webp" alt="Imagen 2">
+                <h2>Calibración</h2>
+                <p>Contamos con acreditación ante la EMA en bajo, mediano y alto alcance de basculas electrónicas o mecánicas.</p>
+            </div>
+            
+            <div class="image-box">
+                <img src="Images/Servicios3.webp" alt="Imagen 3">
+                <h2>Inspección oficial</h2>
+                <p>Contamos con servicio de inspección oficial ante PROFECO de basculas electrónicas o mecánicas.</p>
+            </div>
+            
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col 12">
+                <h4 class="center-align">Galería Fotográfica</h4>
+
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="Images/Galeria1.webp" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Images/Galeria2.webp" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Images/Galeria3.webp" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Images/Galeria4.webp" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Images/Galeria5.webp" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Images/Galeria6.webp" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Images/Galeria7.webp" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Images/Galeria8.webp" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Images/Galeria9.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="whatsapp-button">
+        <a href="https://api.whatsapp.com/send/?phone=525568186849&text&type=phone_number&app_absent=0" target="_blank">
+            <img src="Images/whatsapp-logo-1.png"alt="WhatsApp">
+        </a>
+    </div>
+    
+    <div>
+        <h3>
+            Copyright © 2023 SIAUMex - Todos los derechos reservados.
+        </h3>
+    </div>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="main.js"></script>
+
+    <script>
+    window.addEventListener('load', function() {
+    document.body.style.visibility = 'visible';
+
+    const images = document.querySelectorAll('img');
+    
+    // Establecer la visibilidad de todas las imágenes a 'visible'
+    images.forEach(function(img) {
+        img.style.visibility = 'visible';
+    });
+});
+
+
+
+        $(function(){
+            $("#navbar").load("layout.html", function() {
+                // Después de cargar el navbar, maneja los eventos del carrusel aquí
+                initCarousel();
+            }); 
+        });
+
+
+        $(document).ready(function() {
+            if ($(".container_carru").html() != null)  {
+                var objects = $(".container_carru #items img");
+                var items = $(".container_carru #items img").length - 1;
+                var i = 0;
+                $(".container_carru #items img").each(function (index) { 
+                    if (i == 0) {
+                        $(this).addClass('img_left');
+                    } else if (i == 1) {
+                        $(this).addClass('img_center');
+                    } else if (i == 2) {
+                        $(this).addClass('img_rigth');
+                    }
+                    i++;
+                }); 
+        
+                var dataimg_Cen = 1;
+        
+                function moveRight() {
+                    $("#arrowrigth").trigger("click");
+                    restartInterval();
+                }
+        
+                function restartInterval() {
+                    clearInterval(interval); // Limpiar el intervalo anterior
+                    interval = setInterval(moveRight, 4000); // Reiniciar el intervalo
+                }
+        
+                var interval = setInterval(moveRight, 4000); // Cambio automático cada 1 segundo
+        
+                $("#arrowleft").on("click", function(event) {
+                    clearInterval(interval); // Limpiar el intervalo al hacer clic en el botón izquierdo
+                    // Resto del código para mover a la izquierda
+                    restartInterval(); // Reiniciar el intervalo después de la interacción del usuario
+                });
+        
+                $("#arrowrigth").on("click", function(event) {
+                    clearInterval(interval); // Limpiar el intervalo al hacer clic en el botón derecho
+                    // Resto del código para mover a la derecha
+                    restartInterval(); // Reiniciar el intervalo después de la interacción del usuario
+                });
+            }
+        });
+        
+
+    </script>
+</body>
+</html>

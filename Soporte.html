@@ -1,0 +1,150 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="widht=device-widht, initial-scale=1.0">
+        <title>SIAUMex</title>
+        <link rel="stylesheet" href="StyleSop.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-lsAwiE5DmJB4FHYLRjE+wrpWWpLjIzjUI0i1X2Kb57qQllFsR49B7zzG59lxyQ3wRY7szWN45mTR4lLoxg8IHg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+
+    <header class="header">
+        <div class="menu container">
+            <a href="Index.html" class="logo">
+                <img src="Images/logo.webp" alt="Logo">
+            </a>
+            <input type="checkbox" id="toggle-menu" class="menu-checkbox">
+            <label for="toggle-menu" class="menu-icon">&#9776;</label>
+            <nav class="navbar">
+                
+    </header>
+
+    <div class="container1">
+        <div class="text-container">
+            <h5>Preguntas y respuestas</h5>
+        </div>
+    </div>
+
+    <div class="question">
+        <h3 class="question-title">
+            ¿Se pueden automatizar procesos con básculas?
+            <img src="https://www.kindpng.com/picc/m/460-4600722_flecha-hacia-abajo-angle-double-down-icon-hd.png" class="small-arrow" style="margin-right: 10px;"> 
+        </h3>
+        <div class="answer hidden">
+            <p>Si, podemos realizar automatizaciones con básculas, realizando programación directamente en los indicadores o conectando los indicadores a una computadora.</p>
+        </div>
+        <hr>
+    </div>
+    
+    <div class="question">
+        <h3 class="question-title">
+            ¿Hay ventajas de conectar un equipo de cómputo a una báscula?
+            <img src="https://www.kindpng.com/picc/m/460-4600722_flecha-hacia-abajo-angle-double-down-icon-hd.png" class="small-arrow1" style="margin-right: 10px;"> 
+        </h3>
+        <div class="answer hidden">
+            <p>Si, si conectamos una computadora a una báscula, podemos obtener mayor ventaja sobre tus procesos, por ejemplo: mejor interfaz con los operadores, almacenamiento de información en bases de datos como SQL Server o incluso conexión con otros sistemas y obtener reportes para analizar la información de tus procesos.</p>
+        </div>
+        <hr>
+    </div>
+    
+    <div class="question">
+        <h3 class="question-title">
+            ¿Podemos conectar las básculas a un PLC?
+            <img src="https://www.kindpng.com/picc/m/460-4600722_flecha-hacia-abajo-angle-double-down-icon-hd.png" class="small-arrow2" style="margin-right: 10px;"> 
+        </h3>
+        <div class="answer hidden">
+            <p>Si, podemos conectar tus equipos de pesaje a un equipo PLC, con el fin de poder tener un mayor procesamiento en pesajes dinámicos, por ejemplo.</p>
+        </div>
+        <hr>
+    </div>
+    
+    <div class="question">
+        <h3 class="question-title">
+            ¿Puedo tener la información de mis procesos en cualquier lugar?
+            <img src="https://www.kindpng.com/picc/m/460-4600722_flecha-hacia-abajo-angle-double-down-icon-hd.png" class="small-arrow3" style="margin-right: 10px;"> 
+        </h3>
+        <div class="answer hidden">
+            <p>Si, podemos conectar tus programas a una base de datos en la nube y con un software web podrías controlar tus procesos, administrando los usuarios, catálogos, herramientas y podrás ver en un reporte con gráficos todo tu proceso en tiempo real.</p>
+        </div>
+        <hr>
+    </div>
+    
+    
+
+    <div class="container1">
+        <div class="text-container">
+            <h5>Comunícate con nosotros</h5>
+        </div>
+    </div>
+
+    <div class="whatsapp-button">
+        <a href="https://api.whatsapp.com/send/?phone=525568186849&text&type=phone_number&app_absent=0" target="_blank">
+            <img src="Images/whatsapp-logo-1.png" alt="WhatsApp">
+        </a>
+    </div>
+
+    <div >
+        <h2>ventas@siaumex.com</h2>
+        <h2>Horario</h2>
+        <h3>
+            Lunes a Viernes
+        </h3>
+        <h3>
+            09:00  a 18:00 
+        </h3>
+    </div>
+
+    <div>
+        <h4>
+            Copyright © 2023 SIAUMex - Todos los derechos reservados.
+        </h4>
+    </div>
+
+
+
+    </body>
+    <script src="Index.js"></script>
+    </html>
+
+
+
+
+
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="widht=device-widht, initial-scale=1.0">
+        <title>SIAUMex</title>
+        <link rel="stylesheet" href="Layout.css">
+        <link rel="stylesheet" href="StyleSop.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <style>
+            body {
+            visibility: hidden; /* Oculta todo el contenido */
+        }
+        
+        </style>
+    </head>
+    <body>
+
+        <div id="navbar"></div>
+
+        <script>
+            window.addEventListener('load', function() {
+        document.body.style.visibility = 'visible';
+
+        });
+            $(function(){
+            $("#navbar").load("layout.html"); 
+            });
+            </script>
+    </body>
+

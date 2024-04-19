@@ -1,0 +1,730 @@
+/* Establece márgenes y relleno en el cuerpo */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Asegúrate de que otros elementos no tengan márgenes o relleno */
+h1, h2, h3, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 140px;
+  padding: 0;
+}
+.header {
+  background-color: #ededed;
+  color: #000000;
+}
+
+
+.menu.container .logo img {
+  width: 130px;
+  height: auto;
+  margin-left: 50px;
+}
+
+.menu.container .menu-icon {
+  width: 30px;
+  height: 30px;
+  z-index: 1000;
+}
+
+
+
+.menu.container .navbar a:hover {
+  border-bottom: 2px solid #000;
+}
+
+.menu.container input[type="checkbox"] {
+  display: none;
+}
+
+/* Media query para el cambio de tamaño en la barra de menú */
+@media screen and (max-width: 768px) {
+  .menu.container {
+      padding: 5px; /* Cambia el padding para reducir el tamaño */
+  }
+
+  .menu.container .navbar a {
+      font-size: 18px; /* Reducir el tamaño de la fuente */
+  }
+  .menu.container.scrolled .menu-icon {
+    padding: 5px;
+    margin-top: 20px;
+  }
+}
+
+.main-content {
+  margin-top: 90px; /* Ajusta este valor según el alto de tu barra de menú */
+}
+.menu.container.scrolled {
+  padding: 5px;
+}
+
+.menu.container.scrolled .navbar a {
+  font-size: 18px;
+}
+
+.main-content {
+  margin-top: 90px;
+}
+
+
+
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  .menu.container {
+    flex-direction: row; /* Cambia la dirección del flex a fila */
+    padding: 20px; /* Aumenta el relleno para separar los elementos */
+    justify-content: space-between; /* Distribuye los elementos en el contenedor */
+    align-items: center; /* Centra verticalmente los elementos */
+  }
+  .main-content {
+    margin-top: 200px;
+  }
+
+  .menu.container .logo img {
+    margin: 0; /* Elimina el margen izquierdo en pantallas más pequeñas */
+    margin-bottom: 20px; /* Agrega espacio debajo del logo */
+    width: 120px; /* Cambia el ancho de la imagen del logo */
+    height: auto;
+  }
+
+  .menu.container .navbar {
+    display: none; /* Oculta la barra de navegación en pantallas pequeñas */
+  }
+
+  .menu.container .menu-icon {
+    display: block; /* Muestra el icono de menú en pantallas pequeñas */
+    font-size: 24px; /* Ajusta el tamaño del icono de menú */
+
+  }
+}
+
+/* Estilos del menú desplegable */
+.menu.container .menu-icon {
+  display: none; /* Por defecto, ocultamos el icono de menú desplegable */
+}
+
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  .menu.container .menu-icon {
+      display: block; /* Muestra el icono de menú desplegable en pantallas pequeñas */
+      cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
+      margin-left: 50px; /* Ajusta el margen izquierdo para mover el icono de menú a la izquierda */
+      margin-right: 40px;
+      margin-top: 0px;
+      margin-bottom: 10px;
+  }
+
+  .menu.container .logo {
+      order: 1; /* Cambia el orden del logo */
+  }
+
+  .menu.container .menu-icon {
+      order: 1; /* Cambia el orden del icono de menú */
+  }
+
+  .menu.container .navbar {
+      display: none; /* Oculta la barra de navegación en pantallas pequeñas */
+      order: 3; /* Cambia el orden del menú desplegable */
+      position: absolute; /* Cambia la posición del menú desplegable */
+      text-align: center; /* Centra el texto dentro del menú desplegable */
+      top: calc(100% + 1px); /* Posición 10px por debajo del icono del menú */
+      background-color: #ededed; /* Fondo del menú desplegable */
+      right: 0;
+      margin-right: 10px;
+      
+    }
+
+  .menu.container input[type="checkbox"] {
+      display: none; /* Oculta el checkbox en pantallas pequeñas */
+  }
+
+  .menu.container input[type="checkbox"]:checked ~ .navbar {
+      display: block; /* Muestra el menú cuando el checkbox está marcado */
+  }
+
+  .menu.container .navbar ul {
+      display: flex;
+      flex-direction: column; /* Alinea las opciones del menú verticalmente */
+      list-style: none;
+      margin: 0;
+      padding: 5px 5px;
+    }
+
+  .menu.container .navbar li {
+      margin-left: 0; /* Elimina el margen izquierdo para alinear las opciones del menú en el centro */
+      margin-right: 1; /* Elimina el margen derecho para alinear las opciones del menú en el centro */
+      text-align: center; /* Centra el texto dentro de las opciones del menú */
+  }
+
+  .menu.container .navbar a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    transition: border-bottom 0.3s;
+    padding: 0px 10px;
+  }
+}
+
+
+
+
+  .header-content.containerimg .image-box {
+    display: flex; /* Usa flexbox para alinear verticalmente el contenido */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra verticalmente el contenido */
+    text-align: center; /* Centra el texto horizontalmente */
+    padding: 20px; /* Agrega un relleno para separar las imágenes del texto (ajusta según tus preferencias) */
+    margin-top: 20px;
+  }
+  
+  .header-content.containerimg {
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos de manera equitativa */
+  }
+  
+  .image-box {
+    text-align: center; /* Centra el contenido horizontalmente */
+    flex: 1; /* Ocupa el espacio disponible de manera equitativa */
+  }
+  
+  .image-box img {
+    border-radius: 80%; /* Aplica un borde circular a la imagen */
+    width: 400px; /* Ajusta el tamaño de las imágenes según tus preferencias */
+    height: 400px;
+  }
+  .header-content.containerimg .image-box h2 {
+    margin-top: 50px;
+    font-family: 'Lato', Arial, sans-serif; /* Cambia 'TuFuente' por la fuente deseada */
+    font-size: 30px; /* Cambia el tamaño de fuente según tus preferencias */
+    color: rgb(0, 0, 0); /* Cambia el color del texto según tus preferencias */
+    max-width: 330px;
+  }
+  
+  .header-content.containerimg .image-box p {
+    margin-top: 50px;
+    font-family: 'Lato', Arial, sans-serif; /* Cambia 'OtraFuente' por la fuente deseada */
+    font-size: 20px; /* Cambia el tamaño de fuente según tus preferencias */
+    color: #666; /* Cambia el color del texto según tus preferencias */
+    max-width: 330px;
+  }
+  
+  .whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366; /* Color de fondo de WhatsApp */
+    color: #fff; /* Color de texto */
+    padding: 10px 20px;
+    border-radius: 50px; /* Establece un borde redondeado para el botón */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Agrega una sombra al botón */
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+    display: none;
+    align-items: center;
+  }
+
+  .whatsapp-button {
+    z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+}
+
+.whatsapp-button img {
+    width: 50px; /* Establece el ancho de la imagen del icono */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+}
+  
+
+
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+  .header-content.containerimg {
+    margin-top: 60px; /* Ajusta el margen superior */
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente en dispositivos móviles */
+    align-items: center; /* Centra verticalmente el contenido */
+  }
+  
+  .whatsapp-button {
+    padding: 8px 16px; /* Reducir el padding para dispositivos móviles */
+    display: flex;
+    font-size: 16px; /* Reducir el tamaño de la fuente para dispositivos móviles */
+}
+
+.whatsapp-button img {
+    width: 20px; /* Reducir el tamaño del logo de WhatsApp para dispositivos móviles */
+}
+
+  .header-content.containerimg .image-box {
+    padding: 10px; /* Ajusta el relleno para dispositivos móviles */
+  }
+  
+  .image-box img {
+    max-width: 100%; /* Ajusta el tamaño máximo de las imágenes para dispositivos móviles */
+    max-height: auto; /* Permite que la altura se ajuste automáticamente al ancho */
+    width: auto; /* Permite que la imagen mantenga su relación de aspecto */
+    height: auto; /* Permite que la imagen mantenga su relación de aspecto */
+    border-radius: 50%; /* Ajusta el borde circular para dispositivos móviles */
+  }
+
+  .header-content.containerimg .image-box h2 {
+    font-size: 24px; /* Tamaño de fuente más pequeño para dispositivos móviles */
+    margin-top: 20px; /* Ajusta el margen superior */
+    max-width: 250px; /* Ajusta el ancho máximo */
+  }
+  
+  .header-content.containerimg .image-box p {
+    font-size: 16px; /* Tamaño de fuente más pequeño para dispositivos móviles */
+    margin-top: 20px; /* Ajusta el margen superior */
+    max-width: 250px; /* Ajusta el ancho máximo */
+  }
+
+
+
+
+  div h3 {
+    font-size: 40px; /* Tamaño de fuente más pequeño para dispositivos móviles */
+    margin-top: 0px; /* Ajusta el margen superior */
+    margin-bottom: 30px;
+  }
+}
+
+
+div h3 {
+  text-align: center; /* Centra horizontalmente el texto */
+    color: #a3a2a2; /* Cambia el color de la fuente, puedes reemplazar #FF0000 por el código de color que desees */
+    font-family: 'TuFuente', Arial, sans-serif; /* Cambia 'TuFuente' por el nombre de la fuente deseada */
+    font-size: 25px; /* Cambia el tamaño de fuente según tus preferencias */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+div h4 {
+  margin-bottom: 0px;
+  margin-top: 50px;
+  text-align: center; /* Centra horizontalmente el texto */
+  color: rgb(255, 255, 255);/* Cambia el color de la fuente, puedes reemplazar #FF0000 por el código de color que desees */
+  font-family: 'Latio', Arial, sans-serif; /* Cambia 'TuFuente' por el nombre de la fuente deseada */
+  font-size: 40px; /* Cambia el tamaño de fuente según tus preferencias */
+}
+
+.container_carru h4 {
+  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+}
+.container_carru {
+  padding-top: 40px; /* Ajusta el relleno superior según sea necesario */
+}
+
+
+@keyframes rigthR {
+  0% {
+      opacity: 1;
+      -webkit-transform: translateX(-50%) scale(1);
+      -moz-transform: translateX(-50%) scale(1);
+      -o-transform: translateX(-50%) scale(1);
+      transform: translateX(-50%) scale(1);
+      z-index: 90;
+  }
+  30% {
+      opacity: 1;
+      -webkit-transform: translateX(10%) scale(0.94);
+      -moz-transform: translateX(10%) scale(0.94);
+      -o-transform: translateX(10%) scale(0.94);
+      transform: translateX(10%) scale(0.94);
+      z-index: 50;
+  }
+  100% {
+      opacity: 0.4;
+      -webkit-transform: translateX(0%) scale(0.9);
+      -moz-transform: translateX(0%) scale(0.9);
+      -o-transform: translateX(0%) scale(0.9);
+      transform: translateX(0%) scale(0.9);
+      z-index: 0;
+  }
+}
+
+@keyframes rigthL {
+  0% {
+      left: 50%;
+      opacity: 0.1;
+      -webkit-transform: translateX(0%) scale(0.9);
+      -moz-transform: translateX(0%) scale(0.9);
+      -o-transform: translateX(0%) scale(0.9);
+      transform: translateX(0%) scale(0.9);
+      z-index: 0;
+  }
+  100% {
+      left: 50%;
+      opacity: 0.4;
+      -webkit-transform: translateX(-100%) scale(0.9);
+      -moz-transform: translateX(-100%) scale(0.9);
+      -o-transform: translateX(-100%) scale(0.9);
+      transform: translateX(-100%) scale(0.9);
+      z-index: 0;
+  }
+}
+
+@keyframes rigthC {
+  0% {
+      left: 50%;
+      opacity: 0.4;
+      -webkit-transform: translateX(-100%) scale(0.9);
+      -moz-transform: translateX(-100%) scale(0.9);
+      -o-transform: translateX(-100%) scale(0.9);
+      transform: translateX(-100%) scale(0.9);
+      z-index: 0;
+  }
+  20% {
+      left: 50%;
+      opacity: 1;
+      -webkit-transform: translateX(-110%) scale(0.94);
+      -moz-transform: translateX(-110%) scale(0.94);
+      -o-transform: translateX(-110%) scale(0.94);
+      transform: translateX(-110%) scale(0.94);
+      z-index: 50;
+  }
+  100% {
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      transform: translateX(-50%);
+      z-index: 90;
+  }
+}
+
+@keyframes leftL {
+  0% {
+      left: 50%;
+      opacity: 1;
+      -webkit-transform: translateX(-50%) scale(1);
+      -moz-transform: translateX(-50%) scale(1);
+      -o-transform: translateX(-50%) scale(1);
+      transform: translateX(-50%) scale(1);
+      z-index: 90;
+  }
+  30% {
+      left: 50%;
+      opacity: 1;
+      -webkit-transform: translateX(-110%) scale(0.94);
+      -moz-transform: translateX(-110%) scale(0.94);
+      -o-transform: translateX(-110%) scale(0.94);
+      transform: translateX(-110%) scale(0.94);
+      z-index: 50;
+  }
+  100% {
+      left: 50%;
+      opacity: 0.4;
+      -webkit-transform: translateX(-100%) scale(0.9);
+      -moz-transform: translateX(-100%) scale(0.9);
+      -o-transform: translateX(-100%) scale(0.9);
+      transform: translateX(-100%) scale(0.9);
+      z-index: 0;
+  }
+}
+
+@keyframes LeftR {
+  0% {
+      left: 50%;
+      opacity: 0.1;
+      -webkit-transform: translateX(-100%) scale(0.9);
+      -moz-transform: translateX(-100%) scale(0.9);
+      -o-transform: translateX(-100%) scale(0.9);
+      transform: translateX(-100%) scale(0.9);
+  }
+  100% {
+      left: 50%;
+      opacity: 0.4;
+      -webkit-transform: translateX(0%) scale(0.9);
+      -moz-transform: translateX(0%) scale(0.9);
+      -o-transform: translateX(0%) scale(0.9);
+      transform: translateX(0%) scale(0.9);
+      z-index: 0;
+  }
+}
+
+@keyframes leftC {
+  0% {
+      opacity: 0.4;
+      -webkit-transform: translateX(0%) scale(0.9);
+      -moz-transform: translateX(0%) scale(0.9);
+      -o-transform: translateX(0%) scale(0.9);
+      transform: translateX(0%) scale(0.9);
+      z-index: 0;
+  }
+  20% {
+      opacity: 1;
+      -webkit-transform: translateX(10%) scale(0.94);
+      -moz-transform: translateX(10%) scale(0.94);
+      -o-transform: translateX(10%) scale(0.94);
+      transform: translateX(10%) scale(0.94);
+      z-index: 0;
+  }
+  100% {
+      opacity: 1;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      transform: translateX(-50%);
+      z-index: 90;
+  }
+}
+
+body {
+  background: rgb(2, 72, 129);
+  margin: 0;
+}
+
+.container_carru {
+  background: rgb(2, 72, 129);
+  position: relative;
+}
+
+.container_carru #actions .arrowrigth {
+  cursor: pointer;
+  top: 50%;
+  width: 5%;
+  position: absolute;
+  z-index: 201;
+  right: 10px;
+  -webkit-transform: rotate(268deg);
+  transform: rotate(268deg);
+}
+
+.container_carru #actions .arrowleft {
+  cursor: pointer;
+  top: 50%;
+  width: 5%;
+  position: absolute;
+  z-index: 201;
+  left: 10px;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.container_carru #items {
+  padding: 5%;
+
+  z-index: 200;
+  overflow: hidden;
+  height: 750px;
+  position: relative;
+}
+
+.container_carru #items #item {
+  display: none;
+  height: 80%;
+  position: absolute;
+}
+
+.container_carru #items .img_left {
+  display: block!important;
+  left: 50%;
+  opacity: 0.4;
+  z-index: 0;
+  -webkit-transform: translateX(-100%) scale(0.9);
+  -moz-transform: translateX(-100%) scale(0.9);
+  -o-transform: translateX(-100%) scale(0.9);
+  transform: translateX(-100%) scale(0.9);
+}
+
+.container_carru #items .img_rigth {
+  display: block!important;
+  left: 50%;
+  opacity: 0.4;
+  -webkit-transform: translateX(0%) scale(0.9);
+  -moz-transform: translateX(0%) scale(0.9);
+  -o-transform: translateX(0%) scale(0.9);
+  transform: translateX(0%) scale(0.9);
+  z-index: 0;
+}
+
+.container_carru #items .img_center {
+  display: block!important;
+  left: 50%;
+  -webkit-transform: translateX(-50%) scale(1);
+  -moz-transform: translateX(-50%) scale(1);
+  -o-transform: translateX(-50%) scale(1);
+  transform: translateX(-50%) scale(1);
+  z-index: 90;
+}
+
+.container_carru #items .animaterigthR {
+  animation-name: rigthR;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+
+.container_carru #items .animaterigthL {
+  animation-name: rigthL;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+
+.container_carru #items .animaterigthC {
+  animation-name: rigthC;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+
+.container_carru #items .animateleftL {
+  animation-name: leftL;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+
+.container_carru #items .animateleftR {
+  animation-name: LeftR;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+
+.container_carru #items .animateleftC {
+  animation-name: leftC;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+
+#actions a {
+  /* Tamaño de los botones */
+  width: 40px; /* Modifica el ancho según sea necesario */
+  height: 40px; /* Modifica la altura según sea necesario */
+  top: 50%; /* Para centrar verticalmente */
+  transform: translateY(-50%); /* Para centrar verticalmente */
+}
+
+.arrowrigth, .arrowleft {
+  /* Aplicar opacidad a toda la flecha */
+  opacity: 0.7; /* Cambia la opacidad a tu preferencia (0.0 - 1.0) */
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.arrowrigth img {
+  width: 150%; /* Cambia el tamaño a tu preferencia */
+}
+.arrowleft img {
+  width: 150%; /* Cambia el tamaño a tu preferencia */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos base para dispositivos móviles y de escritorio */
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+  .container_carru #actions .arrowrigth {
+    width: 10%; /* Modifica el ancho según sea necesario */
+    right: 5px; /* Modifica la posición desde el borde derecho */
+    left: 280px; /* Modifica la posición desde el borde izquierdo */
+    display: active;
+  }
+
+  .container_carru #actions .arrowleft {
+    width: 10%; /* Modifica el ancho según sea necesario */
+    right: 5px; /* Modifica la posición desde el borde derecho */
+    left: 5px; /* Modifica la posición desde el borde izquierdo */
+    display: active;
+  }
+  
+  .container_carru {
+    background: rgb(2, 72, 129);
+    position: relative;
+    padding: 50px; /* Ajusta el relleno para dar más espacio al contenido */
+    margin-bottom: 20px;
+  }
+  
+  .container_carru #items {
+    padding: 40%; /* Ajusta el relleno */
+    height: 290px; /* Altura automática */
+    text-align: center;
+    margin-top:-70px;
+    margin-bottom: 10px;
+  }
+
+  .arrowrigth, .arrowleft {
+    margin-left: 0px; /* Ajusta el margen izquierdo */
+    margin-right: 0px; /* Ajusta el margen derecho */
+  }
+
+  .arrowrigth img,
+  .arrowleft img {
+    width: 10%; /* Cambia el tamaño a tu preferencia */
+  }
+
+  .container_carru #items .img_left,
+  .container_carru #items .img_rigth{
+    width: auto; /* Ancho automático */
+    max-width: 50%; /* Máximo ancho igual al ancho del contenedor */
+    height: 100px; /* Altura automática */
+    display: block; /* Permite que las imágenes se muestren en línea */
+
+  }
+
+  div h4 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: center; /* Centra horizontalmente el texto */
+    color: rgb(255, 255, 255);/* Cambia el color de la fuente, puedes reemplazar #FF0000 por el código de color que desees */
+    font-family: 'Latio', Arial, sans-serif; /* Cambia 'TuFuente' por el nombre de la fuente deseada */
+    font-size: 20px; /* Cambia el tamaño de fuente según tus preferencias */
+  }
+  
+  .container_carru h4 {
+    margin-top: 10px; /* Ajusta el margen superior según sea necesario */
+    margin-bottom: 0px;
+  }
+  .container_carru {
+    padding-top: 10px; /* Ajusta el relleno superior según sea necesario */
+  }
+  
+  .container_carru #items .img_center {
+    width:  90%; /* Ajusta el ancho de la imagen central */
+    max-width: none; /* Elimina la restricción de ancho máximo */
+    height: 20px; /* Altura automática */
+    display: block; /* Cambia a "block" para evitar espacios adicionales */
+    margin-left: 10px; /* Margen automático en los lados para centrar horizontalmente */
+    margin-right: 10px;
+    margin-bottom: 1px;
+    margin-top: 1px;
+  }
+
+  .menu.container .navbar ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 5px 5px;
+  }
+
+.menu.container .navbar li {
+    margin: -11px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

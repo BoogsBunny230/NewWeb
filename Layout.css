@@ -1,0 +1,124 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+.menu.container.scrolled {
+  height: 82px;
+}
+
+.logo img.scrolled {
+  width: 100px !important;
+}
+
+.menu.container {
+  background-color: rgb(246, 246, 246);
+  color: #000000;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+
+
+.menu.container .logo img {
+  width: 130px;
+  height: auto;
+  margin-left: 10px; /* Ajuste de margen */
+  transition: width 0.3s ease, transform 0.3s ease;
+}
+
+.menu.container .menu-icon {
+  display: none;
+}
+
+.menu.container .menu-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.menu.container .navbar {
+  flex-grow: 1;
+  background-color: rgb(246, 246, 246);
+}
+
+.menu.container .navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu.container .navbar li {
+  margin-left: 15px;
+  margin-right: 15px;
+  position: relative;
+}
+
+.menu.container .navbar a {
+  text-decoration: none;
+  color: #000;
+  font-size: 22px;
+  font-family: 'Lato', Arial, sans-serif;
+  transition: border-bottom 0.3s;
+  padding: 5px 10px;
+}
+
+.menu.container .navbar a:hover {
+  border-bottom: 2px solid #000;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .menu.container .navbar {
+
+    position: absolute;
+    top: 50px; /* Ajuste de la posición */
+    left: 0;
+    background-color: #ababab;
+    width: 100%;
+    padding: 0px;
+  }
+
+  .menu.container .navbar a {
+    display: flex;
+    color: #000; /* Color del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    font-family: 'Roboto', sans-serif; /* Tipo de fuente */
+  }
+
+  .menu.container .navbar li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .menu.container .menu-icon {
+    display: none;
+  }
+
+  .menu.container .navbar.show-menu {
+    display: block !important;
+    height: 208px;
+    width: 320px;
+  }
+
+  div h3 {
+    text-align: center; /* Centra horizontalmente el texto */
+    color: #a3a2a2; /* Cambia el color de la fuente, puedes reemplazar #FF0000 por el código de color que desees */
+    font-family: 'TuFuente', Arial, sans-serif; /* Cambia 'TuFuente' por el nombre de la fuente deseada */
+    font-size: 18px; /* Cambia el tamaño de fuente según tus preferencias */
+    margin-top: 100px;
+    margin-bottom: 200px;
+  }
+}
+
+
+
+
+
+
+

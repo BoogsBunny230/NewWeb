@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navbar</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    
+</head>
+<body>
+    <header class="header">
+        <div class="menu container" style="max-width: 100% !important;"content="width=device-width, initial-scale=1.0">
+            <a href="Index.html" class="logo">
+                <img src="Images/logo.webp" alt="Logo" id="logo">
+            </a>
+            <!-- Agregar el icono del menú -->
+            <div class="menu-icon">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVlrM_gPuWI1eV2W8gV053gI9fl_rFe9Tb5x1hMf08rA&s" alt="Menú" id="menu">
+            </div>
+
+            <nav class="navbar" id="menu-toggle">
+                <ul>
+                    <li><a href="Index.html">INICIO</a></li>
+                    <li><a href="Soluciones.html">SOLUCIONES</a></li>
+                    <li><a href="Productos.html">PRODUCTOS</a></li>
+                    <li><a href="Servicios2.html">SERVICIOS</a></li>
+                    <li><a href="Soporte.html">SOPORTE</a></li>
+                    <li><a href="Descargas.html">DESCARGAS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".menu-icon").click(function() {
+                $(".navbar").slideToggle("fast");
+            });
+
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 0) {
+                    $('.menu.container').addClass('scrolled');
+                    $('.logo img').addClass('scrolled');
+                } else {
+                    $('.menu.container').removeClass('scrolled');
+                    $('.logo img').removeClass('scrolled');
+                }
+            });
+
+            var paginaActual = window.location.href.split("/").pop();
+            $("nav a[href='" + paginaActual + "']").addClass("active");
+        });
+
+        $(document).ready(function() {
+        if ($(".container_carru").html() != null)  {
+        var objects = $(".container_carru #items img");
+        var items = $(".container_carru #items img").length - 1;
+        var i = 0;
+        $(".container_carru #items img").each(function (index) { 
+             if (i == 0) {
+                 $(this).addClass('img_left');
+             }else if (i == 1) {
+                $(this).addClass('img_center');
+             }else if (i == 2) {
+               $(this).addClass('img_rigth');
+             };
+             i++;
+        }); 
+        var dataimg_Cen = 1;
+        $("#arrowleft").on( "click", function( event ) {
+        $(".container_carru #items img").attr('class', '');
+            if (dataimg_Cen == 0) {
+                dataimg_left = items;
+            }else{
+                dataimg_left = dataimg_Cen - 1;
+            };
+            if (dataimg_left == 0) {
+                dataimg_rigth = items;
+            }else{
+                dataimg_rigth = dataimg_left - 1;
+            };
+              //center
+              img_center = $(objects[dataimg_Cen]);
+              img_center.addClass('animaterigthR');
+              img_center.addClass("img_rigth");
+              //left 
+              img_left =  $(objects[dataimg_left]);
+              img_left.addClass("animaterigthC");
+              img_left.addClass("img_center");
+              //rigght
+              img_rigth =  $(objects[dataimg_rigth]);
+              img_rigth.addClass("animaterigthL");
+              img_rigth.addClass("img_left");
+              if (dataimg_Cen == 0) {
+                  dataimg_Cen = items; 
+                  }else{
+                      dataimg_Cen = dataimg_Cen - 1;
+               }; 
+          });
+          //izquierdo
+         $("#arrowrigth").on( "click", function( event ) {
+             $(".container_carru #items img").attr('class', '');
+            if (dataimg_Cen == items) {
+                dataimg_rigth = 0;
+            }else{
+                dataimg_rigth = dataimg_Cen + 1;
+            };
+            if (dataimg_rigth == items) {
+                dataimg_left = 0;
+            }else{
+                dataimg_left = dataimg_rigth + 1;
+            };
+            //center
+              img_center = $(objects[dataimg_Cen]);
+              img_center.addClass('animateleftL');
+              img_center.addClass("img_left");
+              // //  //left 
+              img_left =  $(objects[dataimg_left]);
+              img_left.addClass("animateleftR");
+              img_left.addClass("img_rigth");
+              // // // //rigght
+              img_rigth =  $(objects[dataimg_rigth]);
+              img_rigth.addClass("animateleftC");
+              img_rigth.addClass("img_center");
+              //
+              if(dataimg_Cen == items) {
+                  dataimg_Cen = 0;
+                  }else{
+                    dataimg_Cen = dataimg_Cen + 1;
+              }; 
+          });
+        //sweet
+        var myElement = document.getElementsByClassName('container_carru')[0];
+        var mc = new Hammer(myElement);
+        mc.on("swipeleft", function(ev) {
+             $("#arrowrigth" ).trigger( "click" );
+        });
+        mc.on("swiperight", function(ev) {
+             $("#arrowleft" ).trigger( "click" );
+        });
+        }
+        });
+        $(document).ready(function() {
+    // Agregar un evento de clic al icono del menú
+    $(".menu-icon").click(function() {
+        // Alternar la visibilidad del menú al hacer clic en el icono del menú
+        $(".navbar").toggle();
+    });
+});
+$(document).ready(function() {
+    // Agregar un evento de clic al icono del menú
+    $(".menu-icon").click(function() {
+        // Alternar la visibilidad del menú al hacer clic en el icono del menú
+        $(".navbar").toggleClass("show-menu");
+    });
+
+    // Cerrar el menú si se hace clic en un enlace del menú
+    $(".navbar a").click(function() {
+        if ($(window).width() < 769) {
+            $(".navbar").removeClass("show-menu").slideUp("fast");
+        }
+    });
+});
+
+
+
+    </script>
+
+    
+</body>
+</html>
